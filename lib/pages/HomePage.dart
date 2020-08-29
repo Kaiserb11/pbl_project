@@ -22,7 +22,7 @@ class _HomePageState extends State<HomePage> {
             children: [
               Container(
                 width: MediaQuery.of(context).size.width,
-                height: 200,
+                height: 210,
                 decoration: BoxDecoration(
                   color: Colors.purple[900],
                   borderRadius: BorderRadius.circular(10),
@@ -153,6 +153,112 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ],
                 ),
+              ),
+              Container(
+                width: MediaQuery.of(context).size.width,
+                height: 200,
+                decoration: BoxDecoration(
+                  color: Colors.purple[900],
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              Container(
+                child: Padding(
+                  padding: EdgeInsets.only(top: 16, left: 5),
+                  child: Align(
+                    alignment: Alignment.topLeft,
+                    child: Text(
+                  'Avail testing from top clinics :',
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    ),
+                    ),
+                  ),
+                ),
+              ),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                padding: EdgeInsets.fromLTRB(0, 15 , 0, 20),
+                child: Row(
+                  children: [
+                    Container(
+                      width: MediaQuery.of(context).size.width/2.6,
+                      height: 160,
+                      decoration: BoxDecoration(
+                        color: Colors.purple[800],
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(right: 10),
+                    ),
+                    Container(
+                      width: MediaQuery.of(context).size.width/2.6,
+                      height: 160,
+                      decoration: BoxDecoration(
+                        color: Colors.purple[800],
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(right: 10),
+                    ),
+                    Container(
+                      width: MediaQuery.of(context).size.width/2.6,
+                      height: 160,
+                      decoration: BoxDecoration(
+                        color: Colors.purple[800],
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(right: 10),
+                    ),
+                    Container(
+                      width: MediaQuery.of(context).size.width/2.6,
+                      height: 160,
+                      decoration: BoxDecoration(
+                        color: Colors.purple[800],
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(right: 10),
+                    ),
+                    Container(
+                      width: MediaQuery.of(context).size.width/2.6,
+                      height: 160,
+                      decoration: BoxDecoration(
+                        color: Colors.purple[800],
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(right: 10),
+                    ),
+                    Container(
+                      width: MediaQuery.of(context).size.width/2.6,
+                      height: 160,
+                      decoration: BoxDecoration(
+                        color: Colors.purple[800],
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                width: MediaQuery.of(context).size.width,
+                height: 210,
+                decoration: BoxDecoration(
+                  color: Colors.purple[900],
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(bottom: 16),
               ),
             ],
           ),
