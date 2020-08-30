@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pbl_project/widgets/customAppbar.dart';
-
+import 'package:pbl_project/widgets/drawerMenu.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -12,7 +12,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(),
-      
+      drawer: DrawerMenu(),
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
