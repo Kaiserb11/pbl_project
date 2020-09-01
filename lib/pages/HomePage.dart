@@ -24,8 +24,12 @@ class _HomePageState extends State<HomePage> {
                 width: MediaQuery.of(context).size.width,
                 height: 210,
                 decoration: BoxDecoration(
-                  color: Colors.purple[900],
+                  color: Colors.purple[800],
                   borderRadius: BorderRadius.circular(10),
+                  image: DecorationImage(
+                    fit: BoxFit.fill,
+                    image: AssetImage(""),
+                  )
                 ),
               ),
               SingleChildScrollView(
