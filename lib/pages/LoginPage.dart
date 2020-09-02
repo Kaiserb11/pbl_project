@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pbl_project/pages/SignupPage.dart';
+import 'package:pbl_project/widgets/navbar.dart';
 import 'package:pbl_project/pages/HomePage.dart';
 
 
@@ -110,7 +111,7 @@ class _LoginPageState extends State<LoginPage> {
                           onTap: (){
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => HomePage()),
+                        MaterialPageRoute(builder: (context) => BottomNavPage()),
                       );
                       },
                           child: Center(
