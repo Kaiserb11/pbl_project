@@ -14,7 +14,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      backgroundColor: Color(0xFFEDE7F6),
+      backgroundColor: Colors.white,
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
@@ -42,7 +42,7 @@ class _LoginPageState extends State<LoginPage> {
                     "Hello there, \nwelcome back",
                     style: TextStyle(
                       fontSize: 35,
-                      color: Colors.purple[900],
+                      color: Colors.purpleAccent[700],
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -92,7 +92,7 @@ class _LoginPageState extends State<LoginPage> {
                   child: Text(
                     "FORGOT PASSWORD",
                     style: TextStyle(
-                      color: Colors.purple[900],
+                      color: Colors.purpleAccent[700],
                       fontFamily: 'Montserrat',
                       fontWeight: FontWeight.bold,
                     ),
@@ -104,8 +104,8 @@ class _LoginPageState extends State<LoginPage> {
                       height: 40.0,
                       child: Material(
                         borderRadius: BorderRadius.circular(20.0),
-                        shadowColor: Colors.purple[900],
-                        color: Colors.purple[900],
+                        shadowColor: Colors.purpleAccent[700],
+                        color: Colors.purpleAccent[700],
                         elevation: 7.0,
                         child: GestureDetector(
                           onTap: (){
@@ -151,7 +151,7 @@ class _LoginPageState extends State<LoginPage> {
                       'SIGN UP',
                       style: TextStyle(
                         fontSize: 20,
-                        color: Colors.purple[900],
+                        color: Colors.purpleAccent[700],
                         fontFamily: 'Montserrat',
                         fontWeight: FontWeight.bold,
                         
