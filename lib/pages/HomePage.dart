@@ -15,7 +15,7 @@ class _HomePageState extends State<HomePage> {
       body: Container(
           
           child: Column(children: [
-            Padding(padding: EdgeInsets.only(top: 45),),
+            Padding(padding: EdgeInsets.only(top: 25),),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -23,7 +23,7 @@ class _HomePageState extends State<HomePage> {
                 padding: EdgeInsets.only(left: 15),
               ),
               Container(
-                height: MediaQuery.of(context).size.height / 3.1,
+                height: MediaQuery.of(context).size.height / 3.35,
                 width: MediaQuery.of(context).size.width / 2.249,
                 decoration: BoxDecoration(
                   color: Colors.purple[700],
@@ -61,7 +61,7 @@ class _HomePageState extends State<HomePage> {
                           fontWeight: FontWeight.bold
                         )
                       ),
-                      Padding(padding: EdgeInsets.only(top: 24),),
+                      Padding(padding: EdgeInsets.only(top: 14),),
                       Divider(
                         thickness: 3,
                         color: Colors.white,
@@ -85,7 +85,7 @@ class _HomePageState extends State<HomePage> {
                 padding: EdgeInsets.only(left: 15),
               ),
               Container(
-                height: MediaQuery.of(context).size.height / 3.1,
+                height: MediaQuery.of(context).size.height / 3.35,
                 width: MediaQuery.of(context).size.width / 2.249,
                 decoration: BoxDecoration(
                   color: Colors.purple[700],
@@ -116,7 +116,7 @@ class _HomePageState extends State<HomePage> {
                           fontWeight: FontWeight.bold
                         )
                       ),
-                      Padding(padding: EdgeInsets.only(top: 24),),
+                      Padding(padding: EdgeInsets.only(top: 14),),
                       Divider(
                         thickness: 3,
                         color: Colors.white,
@@ -145,7 +145,7 @@ class _HomePageState extends State<HomePage> {
                 padding: EdgeInsets.only(left: 15),
               ),
               Container(
-                height: MediaQuery.of(context).size.height / 3.1,
+                height: MediaQuery.of(context).size.height / 3.35,
                 width: MediaQuery.of(context).size.width / 2.249,
                 decoration: BoxDecoration(
                   color: Colors.purple[700],
@@ -176,7 +176,7 @@ class _HomePageState extends State<HomePage> {
                           fontWeight: FontWeight.bold
                         )
                       ),
-                      Padding(padding: EdgeInsets.only(top: 24),),
+                      Padding(padding: EdgeInsets.only(top: 14),),
                       Divider(
                         thickness: 3,
                         color: Colors.white,
@@ -199,7 +199,7 @@ class _HomePageState extends State<HomePage> {
                 padding: EdgeInsets.only(left: 15),
               ),
               Container(
-                height: MediaQuery.of(context).size.height / 3.1,
+                height: MediaQuery.of(context).size.height / 3.35,
                 width: MediaQuery.of(context).size.width / 2.249,
                 decoration: BoxDecoration(
                   color: Colors.purple[700],
@@ -230,7 +230,7 @@ class _HomePageState extends State<HomePage> {
                           fontWeight: FontWeight.bold
                         )
                       ),
-                      Padding(padding: EdgeInsets.only(top: 24),),
+                      Padding(padding: EdgeInsets.only(top: 14),),
                       Divider(
                         thickness: 3,
                         color: Colors.white,
