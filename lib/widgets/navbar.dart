@@ -27,10 +27,10 @@ class _BottomNavPageState extends State<BottomNavPage> {
         backgroundColor: Colors.transparent,
         showSelectedLabels: false,
         showUnselectedLabels: false,
-        selectedItemColor: Colors.purpleAccent[700],
-        unselectedItemColor: Colors.blueGrey[200],       
+        selectedItemColor: Colors.white,
+        unselectedItemColor: Colors.purple[700],       
         elevation: 0.0,
-        items: [Icons.home, Icons.search, Icons.event_note, Icons.person]
+        items: [Icons.home, Icons.insert_chart, Icons.event_note, Icons.person]
             .asMap()
             .map((key, value) => MapEntry(
                   key,
@@ -38,10 +38,15 @@ class _BottomNavPageState extends State<BottomNavPage> {
                     title: Text(''),
                     icon: Container(
                       padding: const EdgeInsets.symmetric(
-                        vertical: 5.0,
+                        vertical: 6.0,
                         horizontal: 16.0,
                       ),
-                      
+                      decoration: BoxDecoration(
+                        color: _currentIndex == key
+                            ? Colors.purple[700]
+                            : Colors.transparent,
+                        borderRadius: BorderRadius.circular(20.0),
+                      ),
                       child: Icon(value),
                     ),
                   ),

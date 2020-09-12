@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 class SignupPage extends StatefulWidget {
   @override
   _SignupPageState createState() => _SignupPageState();
@@ -38,7 +39,7 @@ class _SignupPageState extends State<SignupPage> {
                     "Hello there, \nregister now",
                     style: TextStyle(
                       fontSize: 35,
-                      color: Colors.purpleAccent[700],
+                      color: Colors.purple[900],
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -87,8 +88,8 @@ class _SignupPageState extends State<SignupPage> {
                       height: 40.0,
                       child: Material(
                         borderRadius: BorderRadius.circular(20.0),
-                        shadowColor: Colors.purpleAccent[700],
-                        color: Colors.purpleAccent[700],
+                        shadowColor: Colors.purple[900],
+                        color: Colors.purple[900],
                         elevation: 7.0,
                         child: GestureDetector(
                           onTap: () {
@@ -128,7 +129,7 @@ class _SignupPageState extends State<SignupPage> {
                       'LOGIN',
                       style: TextStyle(
                         fontSize: 20,
-                        color: Colors.purpleAccent[700],
+                        color: Colors.purple[900],
                         fontFamily: 'Montserrat',
                         fontWeight: FontWeight.bold,
                         

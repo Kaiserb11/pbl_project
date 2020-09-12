@@ -6,13 +6,13 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       automaticallyImplyLeading: false,
-      backgroundColor: Colors.transparent,
+      backgroundColor: Colors.purple[700],
       elevation: 0.0,
       centerTitle: true,
       title: Text(
         'MARKDOC',
         style: TextStyle(
-          color: Colors.purpleAccent[700],
+          color: Colors.white,
           fontWeight: FontWeight.bold,
           fontFamily: 'Montserrat',
           fontSize: 23,

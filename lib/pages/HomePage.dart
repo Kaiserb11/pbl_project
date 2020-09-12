@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pbl_project/widgets/customAppbar.dart';
-
+import 'package:pbl_project/pages/special.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -15,8 +15,10 @@ class _HomePageState extends State<HomePage> {
       body: Container(
           
           child: Column(children: [
-            
-            Row(children: [
+            Padding(padding: EdgeInsets.only(top: 45),),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
               Padding(
                 padding: EdgeInsets.only(left: 15),
               ),
@@ -24,12 +26,19 @@ class _HomePageState extends State<HomePage> {
                 height: MediaQuery.of(context).size.height / 3.1,
                 width: MediaQuery.of(context).size.width / 2.249,
                 decoration: BoxDecoration(
-                  color: Colors.lightBlueAccent,
+                  color: Colors.purple[700],
                   borderRadius: BorderRadius.all(
                     Radius.circular(20)
                   )
                 ),
-                child: Container(
+                child: InkWell(
+                  onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => Special()),
+                            );
+                          },
+                  child: Container(
                   alignment: Alignment.topLeft,
                   padding: EdgeInsets.all(16),
                   child: (
@@ -70,6 +79,7 @@ class _HomePageState extends State<HomePage> {
                     )
                   ),
                   )
+                ),
               ),
               Padding(
                 padding: EdgeInsets.only(left: 15),
@@ -78,7 +88,7 @@ class _HomePageState extends State<HomePage> {
                 height: MediaQuery.of(context).size.height / 3.1,
                 width: MediaQuery.of(context).size.width / 2.249,
                 decoration: BoxDecoration(
-                  color: Colors.purpleAccent[700],
+                  color: Colors.purple[700],
                   borderRadius: BorderRadius.all(
                     Radius.circular(20)
                   )
@@ -138,7 +148,7 @@ class _HomePageState extends State<HomePage> {
                 height: MediaQuery.of(context).size.height / 3.1,
                 width: MediaQuery.of(context).size.width / 2.249,
                 decoration: BoxDecoration(
-                  color: Colors.orangeAccent,
+                  color: Colors.purple[700],
                   borderRadius: BorderRadius.all(
                     Radius.circular(20)
                   )
@@ -192,7 +202,7 @@ class _HomePageState extends State<HomePage> {
                 height: MediaQuery.of(context).size.height / 3.1,
                 width: MediaQuery.of(context).size.width / 2.249,
                 decoration: BoxDecoration(
-                  color: Colors.redAccent,
+                  color: Colors.purple[700],
                   borderRadius: BorderRadius.all(
                     Radius.circular(20)
                   )
@@ -246,26 +256,6 @@ class _HomePageState extends State<HomePage> {
             Padding(
                 padding: EdgeInsets.only(top: 15),
               ),
-            Container(
-              height: MediaQuery.of(context).size.height / 10,
-              width: MediaQuery.of(context).size.width/1.078,
-              decoration: BoxDecoration(
-                  color: Colors.purple[400],
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(20),
-                  ),
-                ),
-              alignment: Alignment.center,
-              child: Text(
-                "Take our Online Test",
-                style: TextStyle(
-                  fontSize: 23,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
-                
-              ),
-            )
           ],),
         ),
     );
