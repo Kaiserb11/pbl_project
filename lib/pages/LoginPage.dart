@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pbl_project/pages/SignupPage.dart';
-import 'package:pbl_project/widgets/navbar.dart';
+import 'package:pbl_project/pages/HomePage.dart';
+
 
 
 
@@ -26,7 +27,7 @@ class _LoginPageState extends State<LoginPage> {
                     decoration: BoxDecoration(
                       image: DecorationImage(
                         fit: BoxFit.cover,
-                        image: AssetImage("assets/login.png"),
+                        image: AssetImage("assets/images/login.png"),
                       ),
                     ),
                   ),
@@ -111,7 +112,7 @@ class _LoginPageState extends State<LoginPage> {
                           onTap: (){
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => BottomNavPage()),
+                        MaterialPageRoute(builder: (context) => HomePage()),
                       );
                       },
                           child: Center(

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:pbl_project/pages/doctor_list.dart';
 
 class SignupPage extends StatefulWidget {
   @override
@@ -23,7 +23,7 @@ class _SignupPageState extends State<SignupPage> {
                     decoration: BoxDecoration(
                       image: DecorationImage(
                         fit: BoxFit.cover,
-                        image: AssetImage("assets/login.png"),
+                        image: AssetImage("assets/images/login.png"),
                       ),
                     ),
                   ),
@@ -93,7 +93,10 @@ class _SignupPageState extends State<SignupPage> {
                         elevation: 7.0,
                         child: GestureDetector(
                           onTap: () {
-                            
+                            Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => DocList()),
+              );
                           },
                           child: Center(
                             child: Text(

@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:pbl_project/widgets/customAppbar.dart';
+import 'package:pbl_project/constant.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:pbl_project/widgets/searchbar.dart';
+import 'package:pbl_project/widgets/category.dart';
+import 'package:pbl_project/widgets/doctorcard.dart';
 import 'package:pbl_project/pages/special.dart';
+
 
 class HomePage extends StatefulWidget {
   @override
@@ -11,253 +16,185 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(),
-      body: Container(
-          
-          child: Column(children: [
-            Padding(padding: EdgeInsets.only(top: 25),),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+      backgroundColor: kBackgroundColor,
+      body: SafeArea(
+        bottom: false,
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
               Padding(
-                padding: EdgeInsets.only(left: 15),
-              ),
-              Container(
-                height: MediaQuery.of(context).size.height / 3.35,
-                width: MediaQuery.of(context).size.width / 2.249,
-                decoration: BoxDecoration(
-                  color: Colors.purple[700],
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(20)
-                  )
+                padding: EdgeInsets.symmetric(horizontal : 15),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    SvgPicture.asset('assets/icons/menu.svg'),
+                    SvgPicture.asset('assets/icons/profile.svg'),
+                  ],
                 ),
-                child: InkWell(
-                  onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => Special()),
-                            );
-                          },
-                  child: Container(
-                  alignment: Alignment.topLeft,
-                  padding: EdgeInsets.all(16),
-                  child: (
-                    Column(
-                      children: [
-                      Container(
-                        alignment: Alignment.topLeft,
-                        child: Icon(
-                        Icons.devices,
-                        color: Colors.white,
-                        size: 35,
-                      ),
-                      ),
-                      Padding(padding: EdgeInsets.only(top: 8),),
-                      Text(
-                        "I need to \nConsult a Doctor \nOnline",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold
-                        )
-                      ),
-                      Padding(padding: EdgeInsets.only(top: 14),),
-                      Divider(
-                        thickness: 3,
-                        color: Colors.white,
-                      ),
-                      Padding(padding: EdgeInsets.only(top: 7),),
-                      Text(
-                        "Chat now",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold
-                        )
-                      )
-                    ],
-                    )
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 30),
+                child: Text(
+                  "Find Your Desired\nDoctors",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 32,
+                    color: kTitleTextColor,
                   ),
-                  )
                 ),
+              ),
+              SizedBox(
+                height: 30,
               ),
               Padding(
-                padding: EdgeInsets.only(left: 15),
+                padding: EdgeInsets.symmetric(horizontal: 30),
+                child: SearchBar(),
               ),
-              Container(
-                height: MediaQuery.of(context).size.height / 3.35,
-                width: MediaQuery.of(context).size.width / 2.249,
-                decoration: BoxDecoration(
-                  color: Colors.purple[700],
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(20)
-                  )
-                ),
-                child: Container(
-                  alignment: Alignment.topLeft,
-                  padding: EdgeInsets.all(16),
-                  child: (
-                    Column(
-                      children: [
-                      Container(
-                        alignment: Alignment.topLeft,
-                        child: Icon(
-                        Icons.person_add,
-                        color: Colors.white,
-                        size: 35,
-                      ),
-                      ),
-                      Padding(padding: EdgeInsets.only(top: 8),),
-                      Text(
-                        "Find best Doctors around \nMe",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold
-                        )
-                      ),
-                      Padding(padding: EdgeInsets.only(top: 14),),
-                      Divider(
-                        thickness: 3,
-                        color: Colors.white,
-                      ),
-                      Padding(padding: EdgeInsets.only(top: 7),),
-                      Text(
-                        "Book now",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold
-                        )
-                      )
-                    ],
-                    )
+              SizedBox(
+                height: 20,
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 30),
+                child: Text(
+                  "Services",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: kTitleTextColor,
+                    fontSize: 20,
                   ),
-                  )
-              ),
-              Padding(
-                padding: EdgeInsets.only(right: 15),
-              ),
-            ],),
-            Padding(padding: EdgeInsets.only(top: 15),),
-            Row(children: [
-              Padding(
-                padding: EdgeInsets.only(left: 15),
-              ),
-              Container(
-                height: MediaQuery.of(context).size.height / 3.35,
-                width: MediaQuery.of(context).size.width / 2.249,
-                decoration: BoxDecoration(
-                  color: Colors.purple[700],
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(20)
-                  )
                 ),
-                child: Container(
-                  alignment: Alignment.topLeft,
-                  padding: EdgeInsets.all(16),
-                  child: (
-                    Column(
-                      children: [
-                      Container(
-                        alignment: Alignment.topLeft,
-                        child: Icon(
-                        Icons.local_hospital,
-                        color: Colors.white,
-                        size: 35,
-                      ),
-                      ),
-                      Padding(padding: EdgeInsets.only(top: 8),),
-                      Text(
-                        "Find me \nTests, Scan and \nCheckups",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold
-                        )
-                      ),
-                      Padding(padding: EdgeInsets.only(top: 14),),
-                      Divider(
-                        thickness: 3,
-                        color: Colors.white,
-                      ),
-                      Padding(padding: EdgeInsets.only(top: 7),),
-                      Text(
-                        "Test centres",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold
-                        )
-                      )
-                    ],
-                    )
-                  ),
-                  )
+              ),
+             SizedBox(
+                height: 20,
+             ),
+              buildCategoryList(),
+              SizedBox(
+                height: 20,
               ),
               Padding(
-                padding: EdgeInsets.only(left: 15),
-              ),
-              Container(
-                height: MediaQuery.of(context).size.height / 3.35,
-                width: MediaQuery.of(context).size.width / 2.249,
-                decoration: BoxDecoration(
-                  color: Colors.purple[700],
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(20)
-                  )
+                padding: EdgeInsets.symmetric(horizontal: 30),
+                child: Text(
+                  'Top Doctors',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: kTitleTextColor,
+                    fontSize: 18,
+                  ),
                 ),
-                child: Container(
-                  alignment: Alignment.topLeft,
-                  padding: EdgeInsets.all(16),
-                  child: (
-                    Column(
-                      children: [
-                      Container(
-                        alignment: Alignment.topLeft,
-                        child: Icon(
-                        Icons.new_releases,
-                        color: Colors.white,
-                        size: 35,
-                      ),
-                      ),
-                      Padding(padding: EdgeInsets.only(top: 8),),
-                      Text(
-                        "Emergency SOS Services around Me",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold
-                        )
-                      ),
-                      Padding(padding: EdgeInsets.only(top: 14),),
-                      Divider(
-                        thickness: 3,
-                        color: Colors.white,
-                      ),
-                      Padding(padding: EdgeInsets.only(top: 7),),
-                      Text(
-                        "Signal SOS",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold
-                        )
-                      )
-                    ],
-                    )
-                  ),
-                  )
               ),
-              Padding(
-                padding: EdgeInsets.only(right: 15),
+              SizedBox(
+                height: 20,
               ),
-            ],),
-            Padding(
-                padding: EdgeInsets.only(top: 15),
-              ),
-          ],),
+              buildDoctorList(),
+            ],
+          ),
         ),
+      ),
+    );
+  }
+
+  buildCategoryList() {
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        children: <Widget>[
+          SizedBox(
+            width: 30,
+          ),
+          InkWell(
+            onTap: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Special()),
+              );
+            },
+            child: CategoryCard(
+            'Book\nDoctors',
+            'assets/images/doctor.png',
+            kBlueColor,
+          ),
+          ),
+          
+          SizedBox(
+            width: 10,
+          ),
+          CategoryCard(
+            'Online\nSessions',
+            'assets/images/onlinedoc.png',
+            kOrangeColor,
+          ),
+          SizedBox(
+            width: 10,
+          ),
+          CategoryCard(
+            'Find\nClinics',
+            'assets/images/hospital.png',
+            kBlueColor,
+          ),
+          SizedBox(
+            width: 10,
+          ),
+          CategoryCard(
+            'Book\nAmbulance',
+            'assets/images/ambulance.png',
+            kOrangeColor,
+          ),
+          SizedBox(
+            width: 10,
+          ),
+          CategoryCard(
+            'Take\nOnline Test',
+            'assets/images/test.png',
+            kBlueColor,
+          ),
+          SizedBox(
+            width: 30,
+          ),
+        ],
+      ),
+    );
+  }
+
+  buildDoctorList() {
+    return Padding(
+      padding: EdgeInsets.symmetric(
+        horizontal: 30,
+      ),
+      child: Column(
+        children: <Widget>[
+          DoctorCard(
+            'Dr. Stella Kane',
+            'Heart Surgeon - Flower Hospitals',
+            'assets/images/doctor1.png',
+            kBlueColor,
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          DoctorCard(
+            'Dr. Joseph Cart',
+            'Dental Surgeon - Flower Hospitals',
+            'assets/images/doctor2.png',
+            kYellowColor,
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          DoctorCard(
+            'Dr. Stephanie',
+            'Eye Specialist - Flower Hospitals',
+            'assets/images/doctor3.png',
+            kOrangeColor,
+          ),
+          SizedBox(
+            height: 20,
+          ),
+        ],
+      ),
     );
   }
 }

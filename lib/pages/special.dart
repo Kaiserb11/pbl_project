@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:pbl_project/widgets/customAppbar.dart';
+import 'package:pbl_project/constant.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:pbl_project/pages/doctor_list.dart';
+import 'package:pbl_project/widgets/special_category.dart';
+
 
 class Special extends StatefulWidget {
   @override
@@ -10,358 +14,174 @@ class _SpecialState extends State<Special> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(),
-      body: SingleChildScrollView(
-        child: Container(
-          alignment: Alignment.center,
-          child: Column(children: [
-          Padding(padding: EdgeInsets.only(top: 20),),
-          Container(
-                width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(
-                  color: Colors.transparent,
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(15)
-                  )
+      backgroundColor: kBackgroundColor,
+      body: SafeArea(
+        bottom: false,
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 15),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    SvgPicture.asset('assets/icons/menu.svg'),
+                    SvgPicture.asset('assets/icons/profile.svg'),
+                  ],
                 ),
-            child: Container(
-              padding: EdgeInsets.only(left: 10),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Container(
-                    padding: EdgeInsets.only(left: 20),
-                    child: Text(
-                      "Select the speciality :",
-                      style: TextStyle(
-                      fontSize: 25,
-                      fontWeight: FontWeight.bold, 
-                      color: Colors.purple[700],
-                      ),
-                    ),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 30),
+                child: Text(
+                  "Find Your Desired\nCategory",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 32,
+                    color: kTitleTextColor,
                   ),
-                  
-              ],),
-            ),
-          ),
-          Padding(padding: EdgeInsets.only(top: 20)),
-          Container(
-            height: MediaQuery.of(context).size.height / 10,
-                width: MediaQuery.of(context).size.width / 1.12,
-                decoration: BoxDecoration(
-                  color: Colors.purple[500],
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(15)
-                  )
                 ),
-            child: Container(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    padding: EdgeInsets.only(left: 20),
-                    child: Text(
-                      "General Physician",
-                      style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold, 
-                      color: Colors.white,
-                      ),
-                    ),
-                  ),
-                  Container(
-                    padding: EdgeInsets.only(right: 20),
-                    child: Transform.rotate(
-                      angle: 180 * 3.14 / 120,
-                      child: Icon(
-                        Icons.arrow_drop_down_circle,
-                        color: Colors.white,
-                        size: 30,
-                      ),
-                    )
-                  ),
-              ],),
-            ),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              buildSpecialList(),
+            ],
           ),
-          Padding(padding: EdgeInsets.only(top: 10)),
-          Container(
-            height: MediaQuery.of(context).size.height / 10,
-                width: MediaQuery.of(context).size.width / 1.12,
-                decoration: BoxDecoration(
-                  color: Colors.purple[400],
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(15)
-                  )
-                ),
-            child: Container(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    padding: EdgeInsets.only(left: 20),
-                    child: Text(
-                      "General Physician",
-                      style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold, 
-                      color: Colors.white,
-                      ),
-                    ),
-                  ),
-                  Container(
-                    padding: EdgeInsets.only(right: 20),
-                    child: Transform.rotate(
-                      angle: 180 * 3.14 / 120,
-                      child: Icon(
-                        Icons.arrow_drop_down_circle,
-                        color: Colors.white,
-                        size: 30,
-                      ),
-                    )
-                  ),
-              ],),
-            ),
-          ),
-          Padding(padding: EdgeInsets.only(top: 10),),
-          Container(
-            height: MediaQuery.of(context).size.height / 10,
-                width: MediaQuery.of(context).size.width / 1.12,
-                decoration: BoxDecoration(
-                  color: Colors.purple[600],
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(15)
-                  )
-                ),
-            child: Container(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    padding: EdgeInsets.only(left: 20),
-                    child: Text(
-                      "General Physician",
-                      style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold, 
-                      color: Colors.white,
-                      ),
-                    ),
-                  ),
-                  Container(
-                    padding: EdgeInsets.only(right: 20),
-                    child: Transform.rotate(
-                      angle: 180 * 3.14 / 120,
-                      child: Icon(
-                        Icons.arrow_drop_down_circle,
-                        color: Colors.white,
-                        size: 30,
-                      ),
-                    )
-                  ),
-              ],),
-            ),
-          ),
-          Padding(padding: EdgeInsets.only(top: 10)),
-          Container(
-            height: MediaQuery.of(context).size.height / 10,
-                width: MediaQuery.of(context).size.width / 1.12,
-                decoration: BoxDecoration(
-                  color: Colors.purple[500],
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(15)
-                  )
-                ),
-            child: Container(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    padding: EdgeInsets.only(left: 20),
-                    child: Text(
-                      "General Physician",
-                      style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold, 
-                      color: Colors.white,
-                      ),
-                    ),
-                  ),
-                  Container(
-                    padding: EdgeInsets.only(right: 20),
-                    child: Transform.rotate(
-                      angle: 180 * 3.14 / 120,
-                      child: Icon(
-                        Icons.arrow_drop_down_circle,
-                        color: Colors.white,
-                        size: 30,
-                      ),
-                    )
-                  ),
-              ],),
-            ),
-          ),
-          Padding(padding: EdgeInsets.only(top: 10)),
-          Container(
-            height: MediaQuery.of(context).size.height / 10,
-                width: MediaQuery.of(context).size.width / 1.12,
-                decoration: BoxDecoration(
-                  color: Colors.purple[400],
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(15)
-                  )
-                ),
-            child: Container(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    padding: EdgeInsets.only(left: 20),
-                    child: Text(
-                      "General Physician",
-                      style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold, 
-                      color: Colors.white,
-                      ),
-                    ),
-                  ),
-                  Container(
-                    padding: EdgeInsets.only(right: 20),
-                    child: Transform.rotate(
-                      angle: 180 * 3.14 / 120,
-                      child: Icon(
-                        Icons.arrow_drop_down_circle,
-                        color: Colors.white,
-                        size: 30,
-                      ),
-                    )
-                  ),
-              ],),
-            ),
-          ),
-          Padding(padding: EdgeInsets.only(top: 10),),
-          Container(
-            height: MediaQuery.of(context).size.height / 10,
-                width: MediaQuery.of(context).size.width / 1.12,
-                decoration: BoxDecoration(
-                  color: Colors.purple[600],
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(15)
-                  )
-                ),
-            child: Container(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    padding: EdgeInsets.only(left: 20),
-                    child: Text(
-                      "General Physician",
-                      style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold, 
-                      color: Colors.white,
-                      ),
-                    ),
-                  ),
-                  Container(
-                    padding: EdgeInsets.only(right: 20),
-                    child: Transform.rotate(
-                      angle: 180 * 3.14 / 120,
-                      child: Icon(
-                        Icons.arrow_drop_down_circle,
-                        color: Colors.white,
-                        size: 30,
-                      ),
-                    )
-                  ),
-              ],),
-            ),
-          ),
-          Padding(padding: EdgeInsets.only(top: 10)),
-          Container(
-            height: MediaQuery.of(context).size.height / 10,
-                width: MediaQuery.of(context).size.width / 1.12,
-                decoration: BoxDecoration(
-                  color: Colors.purple[500],
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(15)
-                  )
-                ),
-            child: Container(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    padding: EdgeInsets.only(left: 20),
-                    child: Text(
-                      "General Physician",
-                      style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold, 
-                      color: Colors.white,
-                      ),
-                    ),
-                  ),
-                  Container(
-                    padding: EdgeInsets.only(right: 20),
-                    child: Transform.rotate(
-                      angle: 180 * 3.14 / 120,
-                      child: Icon(
-                        Icons.arrow_drop_down_circle,
-                        color: Colors.white,
-                        size: 30,
-                      ),
-                    )
-                  ),
-              ],),
-            ),
-          ),
-          Padding(padding: EdgeInsets.only(top: 10)),
-          Container(
-            height: MediaQuery.of(context).size.height / 10,
-                width: MediaQuery.of(context).size.width / 1.12,
-                decoration: BoxDecoration(
-                  color: Colors.purple[400],
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(15)
-                  )
-                ),
-            child: Container(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    padding: EdgeInsets.only(left: 20),
-                    child: Text(
-                      "General Physician",
-                      style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold, 
-                      color: Colors.white,
-                      ),
-                    ),
-                  ),
-                  Container(
-                    padding: EdgeInsets.only(right: 20),
-                    child: Transform.rotate(
-                      angle: 180 * 3.14 / 120,
-                      child: Icon(
-                        Icons.arrow_drop_down_circle,
-                        color: Colors.white,
-                        size: 30,
-                      ),
-                    )
-                  ),
-                  
-              ],),
-            ),
-          ),
-          Padding(padding: EdgeInsets.only(bottom: 10)),
-        ],
-        )
         ),
-      )
+      ),
+    );
+  }
+
+    buildSpecialList() {
+    return Padding(
+      padding: EdgeInsets.symmetric(
+        horizontal: 30,
+      ),
+      child: Column(
+        children: <Widget>[
+          
+          InkWell(
+            onTap: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => DocList()),
+              );
+            },
+            child: SpecialCard(
+            'General Physician',
+            kBlueColor,
+          ),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          SpecialCard(
+            'Anesthesiologists',
+            kYellowColor,
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          SpecialCard(
+            'Cardiologists',
+            kOrangeColor,
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          SpecialCard(
+            'Dermatologists',
+            kBlueColor,
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          SpecialCard(
+            'Endocrinologists',
+            kYellowColor,
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          SpecialCard(
+            'Hematologists',
+            kOrangeColor,
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          SpecialCard(
+            'Internists',
+            kBlueColor,
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          SpecialCard(
+            'Neurologists',
+            kYellowColor,
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          SpecialCard(
+            'Gynecologists',
+            kOrangeColor,
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          SpecialCard(
+            'Oncologists',
+            kBlueColor,
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          SpecialCard(
+            'Ophthalmologists',
+            kYellowColor,
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          SpecialCard(
+            'Pathologists',
+            kOrangeColor,
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          SpecialCard(
+            'Pediatricians',
+            kBlueColor,
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          SpecialCard(
+            'Physiatrists',
+            kYellowColor,
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          SpecialCard(
+            'Radiologists',
+            kOrangeColor,
+          ),
+          SizedBox(
+            height: 20,
+          ),
+        ],
+      ),
     );
   }
 }
