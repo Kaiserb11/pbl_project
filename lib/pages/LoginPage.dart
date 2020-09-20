@@ -15,7 +15,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      backgroundColor: Colors.white,
+      backgroundColor: Color(0xffF9F9F9),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
@@ -43,7 +43,7 @@ class _LoginPageState extends State<LoginPage> {
                     "Hello there, \nwelcome back",
                     style: TextStyle(
                       fontSize: 35,
-                      color: Colors.purple[900],
+                      color: Color(0xffEF716B),
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -93,7 +93,7 @@ class _LoginPageState extends State<LoginPage> {
                   child: Text(
                     "FORGOT PASSWORD",
                     style: TextStyle(
-                      color: Colors.purple[900],
+                      color: Color(0xffEF716B),
                       fontFamily: 'Montserrat',
                       fontWeight: FontWeight.bold,
                     ),
@@ -105,8 +105,8 @@ class _LoginPageState extends State<LoginPage> {
                       height: 40.0,
                       child: Material(
                         borderRadius: BorderRadius.circular(20.0),
-                        shadowColor: Colors.purple[900],
-                        color: Colors.purple[900],
+                        shadowColor: Color(0xffEF716B),
+                        color: Color(0xffEF716B),
                         elevation: 7.0,
                         child: GestureDetector(
                           onTap: (){
@@ -152,7 +152,7 @@ class _LoginPageState extends State<LoginPage> {
                       'SIGN UP',
                       style: TextStyle(
                         fontSize: 20,
-                        color: Colors.purple[900],
+                        color: Color(0xffEF716B),
                         fontFamily: 'Montserrat',
                         fontWeight: FontWeight.bold,
                         

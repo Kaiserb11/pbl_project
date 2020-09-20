@@ -112,20 +112,7 @@ class DetailScreen extends StatelessWidget {
                                     ),
                                   ),
                                   SizedBox(
-                                    width: 16,
-                                  ),
-                                  Container(
-                                    padding: EdgeInsets.all(10),
-                                    decoration: BoxDecoration(
-                                      color: kYellowColor.withOpacity(0.1),
-                                      borderRadius: BorderRadius.circular(10),
-                                    ),
-                                    child: SvgPicture.asset(
-                                      'assets/icons/chat.svg',
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    width: 16,
+                                    width: 15,
                                   ),
                                   Container(
                                     padding: EdgeInsets.all(10),
@@ -158,7 +145,7 @@ class DetailScreen extends StatelessWidget {
                         height: 10,
                       ),
                       Text(
-                        'Dr. Stella is the top most heart surgeon in Flower\nHospital. She has done over 100 successful sugeries\nwithin past 3 years. She has achieved several\nawards for her wonderful contribution in her own\nfield. She’s available for private consultation for\ngiven schedules.',
+                        'Dr. Savitri is the top most heart surgeon in Flower\nHospital. She has done over 100 successful sugeries\nwithin past 3 years. She has achieved several\nawards for her wonderful contribution in her own\nfield. She’s available for private consultation for\ngiven schedules.',
                         style: TextStyle(
                           height: 1.6,
                           color: kTitleTextColor.withOpacity(0.7),
@@ -168,7 +155,7 @@ class DetailScreen extends StatelessWidget {
                         height: 20,
                       ),
                       Text(
-                        'Upcoming Schedules',
+                        'Weekly Schedules',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 18,
@@ -179,30 +166,26 @@ class DetailScreen extends StatelessWidget {
                         height: 20,
                       ),
                       ScheduleCard(
-                        'Consultation',
-                        'Sunday . 9am - 11am',
-                        '12',
-                        'Jan',
+                        'Sunday',
+                        '9am - 11am',
                         kBlueColor,
                       ),
                       SizedBox(
                         height: 10,
                       ),
                       ScheduleCard(
-                        'Consultation',
-                        'Sunday . 9am - 11am',
-                        '13',
-                        'Jan',
+                        'Wednesday',
+                        '9am - 11am',
+
                         kYellowColor,
                       ),
                       SizedBox(
                         height: 10,
                       ),
                       ScheduleCard(
-                        'Consultation',
-                        'Sunday . 9am - 11am',
-                        '14',
-                        'Jan',
+                        'Friday',
+                        '9am - 11am',
+
                         kOrangeColor,
                       ),
                       SizedBox(

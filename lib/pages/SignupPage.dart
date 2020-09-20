@@ -11,7 +11,7 @@ class _SignupPageState extends State<SignupPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      backgroundColor: Colors.white,
+      backgroundColor: Color(0xffF9F9F9),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
@@ -39,7 +39,7 @@ class _SignupPageState extends State<SignupPage> {
                     "Hello there, \nregister now",
                     style: TextStyle(
                       fontSize: 35,
-                      color: Colors.purple[900],
+                      color: Color(0xffEF716B),
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -88,8 +88,8 @@ class _SignupPageState extends State<SignupPage> {
                       height: 40.0,
                       child: Material(
                         borderRadius: BorderRadius.circular(20.0),
-                        shadowColor: Colors.purple[900],
-                        color: Colors.purple[900],
+                        shadowColor: Color(0xffEF716B),
+                        color: Color(0xffEF716B),
                         elevation: 7.0,
                         child: GestureDetector(
                           onTap: () {
@@ -132,7 +132,7 @@ class _SignupPageState extends State<SignupPage> {
                       'LOGIN',
                       style: TextStyle(
                         fontSize: 20,
-                        color: Colors.purple[900],
+                        color: Color(0xffEF716B),
                         fontFamily: 'Montserrat',
                         fontWeight: FontWeight.bold,
                         

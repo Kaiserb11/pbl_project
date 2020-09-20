@@ -167,8 +167,8 @@ class _HomePageState extends State<HomePage> {
       child: Column(
         children: <Widget>[
           DoctorCard(
-            'Dr. Stella Kane',
-            'Heart Surgeon - Flower Hospitals',
+            'Dr. Savitri Sharma',
+            'Heart Surgeon - Sharda Hospitals',
             'assets/images/doctor1.png',
             kBlueColor,
           ),
@@ -176,8 +176,8 @@ class _HomePageState extends State<HomePage> {
             height: 20,
           ),
           DoctorCard(
-            'Dr. Joseph Cart',
-            'Dental Surgeon - Flower Hospitals',
+            'Dr. Jagdish Chandra',
+            'Dental Surgeon - Apollo Hospitals',
             'assets/images/doctor2.png',
             kYellowColor,
           ),
@@ -185,8 +185,8 @@ class _HomePageState extends State<HomePage> {
             height: 20,
           ),
           DoctorCard(
-            'Dr. Stephanie',
-            'Eye Specialist - Flower Hospitals',
+            'Dr. Jatima Rao',
+            'Eye Specialist - Vedanta Hospitals',
             'assets/images/doctor3.png',
             kOrangeColor,
           ),
