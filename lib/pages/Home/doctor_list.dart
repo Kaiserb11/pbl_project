@@ -66,7 +66,7 @@ class _DocListState extends State<DocList> {
           DoctorCard(
             'Dr. Savitri Sharma',
             'Heart Surgeon - Sharda Hospitals',
-            'assets/images/doctor1.png',
+            'assets/images/doctor1.jpg',
             kBlueColor,
           ),
           SizedBox(
@@ -75,7 +75,7 @@ class _DocListState extends State<DocList> {
           DoctorCard(
             'Dr. Jagdish Chandra',
             'Dental Surgeon - Apollo Hospitals',
-            'assets/images/doctor2.png',
+            'assets/images/doctor2.jpg',
             kYellowColor,
           ),
           SizedBox(
@@ -84,7 +84,7 @@ class _DocListState extends State<DocList> {
           DoctorCard(
             'Dr. Jatima Rao',
             'Eye Specialist - Vedanta Hospitals',
-            'assets/images/doctor3.png',
+            'assets/images/doctor3.jpg',
             kOrangeColor,
           ),
           SizedBox(

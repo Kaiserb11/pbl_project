@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pbl_project/constant.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:pbl_project/pages/doctor_list.dart';
+import 'package:pbl_project/pages/Home/doctor_list.dart';
 import 'package:pbl_project/widgets/special_category.dart';
 
 
@@ -82,104 +82,157 @@ class _SpecialState extends State<Special> {
           SizedBox(
             height: 20,
           ),
-          SpecialCard(
+          InkWell(
+            onTap: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => DocList()),
+              );
+            },
+            child: SpecialCard(
             'Anesthesiologists',
-            kYellowColor,
+            kBlueColor,
+          ),
           ),
           SizedBox(
             height: 20,
           ),
-          SpecialCard(
+          InkWell(
+            onTap: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => DocList()),
+              );
+            },
+            child: SpecialCard(
             'Cardiologists',
-            kOrangeColor,
+            kBlueColor,
+          ),
           ),
           SizedBox(
             height: 20,
           ),
-          SpecialCard(
+          InkWell(
+            onTap: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => DocList()),
+              );
+            },
+            child: SpecialCard(
             'Dermatologists',
             kBlueColor,
           ),
+          ),
           SizedBox(
             height: 20,
           ),
-          SpecialCard(
+          InkWell(
+            onTap: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => DocList()),
+              );
+            },
+            child: SpecialCard(
             'Endocrinologists',
-            kYellowColor,
+            kBlueColor,
+          ),
           ),
           SizedBox(
             height: 20,
           ),
-          SpecialCard(
+          InkWell(
+            onTap: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => DocList()),
+              );
+            },
+            child: SpecialCard(
             'Hematologists',
-            kOrangeColor,
+            kBlueColor,
+          ),
           ),
           SizedBox(
             height: 20,
           ),
-          SpecialCard(
+          InkWell(
+            onTap: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => DocList()),
+              );
+            },
+            child: SpecialCard(
             'Internists',
             kBlueColor,
           ),
+          ),
           SizedBox(
             height: 20,
           ),
-          SpecialCard(
+          InkWell(
+            onTap: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => DocList()),
+              );
+            },
+            child: SpecialCard(
             'Neurologists',
-            kYellowColor,
+            kBlueColor,
+          ),
           ),
           SizedBox(
             height: 20,
           ),
-          SpecialCard(
+          InkWell(
+            onTap: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => DocList()),
+              );
+            },
+            child: SpecialCard(
             'Gynecologists',
-            kOrangeColor,
+            kBlueColor,
+          ),
           ),
           SizedBox(
             height: 20,
           ),
-          SpecialCard(
+          InkWell(
+            onTap: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => DocList()),
+              );
+            },
+            child: SpecialCard(
             'Oncologists',
             kBlueColor,
           ),
-          SizedBox(
-            height: 20,
-          ),
-          SpecialCard(
-            'Ophthalmologists',
-            kYellowColor,
           ),
           SizedBox(
             height: 20,
           ),
-          SpecialCard(
+          InkWell(
+            onTap: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => DocList()),
+              );
+            },
+            child: SpecialCard(
             'Pathologists',
-            kOrangeColor,
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          SpecialCard(
-            'Pediatricians',
             kBlueColor,
           ),
-          SizedBox(
-            height: 20,
-          ),
-          SpecialCard(
-            'Physiatrists',
-            kYellowColor,
           ),
           SizedBox(
             height: 20,
           ),
-          SpecialCard(
-            'Radiologists',
-            kOrangeColor,
-          ),
-          SizedBox(
-            height: 20,
-          ),
+          
         ],
       ),
     );

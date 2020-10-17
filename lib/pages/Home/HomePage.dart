@@ -4,7 +4,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:pbl_project/widgets/searchbar.dart';
 import 'package:pbl_project/widgets/category.dart';
 import 'package:pbl_project/widgets/doctorcard.dart';
-import 'package:pbl_project/pages/special.dart';
+import 'package:pbl_project/pages/Home/special.dart';
+import 'package:pbl_project/services/auth.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -13,6 +14,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
+  final AuthService _auth = AuthService();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,8 +31,16 @@ class _HomePageState extends State<HomePage> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    SvgPicture.asset('assets/icons/menu.svg'),
-                    SvgPicture.asset('assets/icons/profile.svg'),
+                    IconButton(
+                    icon: SvgPicture.asset('assets/icons/menu.svg'),
+                    onPressed: null,
+                    ),
+                    IconButton(
+                    icon: SvgPicture.asset('assets/icons/profile.svg'),
+                    onPressed: () async {
+                      await _auth.signOut();
+                      },
+                    ),
                   ],
                 ),
               ),
@@ -169,7 +180,7 @@ class _HomePageState extends State<HomePage> {
           DoctorCard(
             'Dr. Savitri Sharma',
             'Heart Surgeon - Sharda Hospitals',
-            'assets/images/doctor1.png',
+            'assets/images/doctor1.jpg',
             kBlueColor,
           ),
           SizedBox(
@@ -178,7 +189,7 @@ class _HomePageState extends State<HomePage> {
           DoctorCard(
             'Dr. Jagdish Chandra',
             'Dental Surgeon - Apollo Hospitals',
-            'assets/images/doctor2.png',
+            'assets/images/doctor2.jpg',
             kYellowColor,
           ),
           SizedBox(
@@ -187,7 +198,7 @@ class _HomePageState extends State<HomePage> {
           DoctorCard(
             'Dr. Jatima Rao',
             'Eye Specialist - Vedanta Hospitals',
-            'assets/images/doctor3.png',
+            'assets/images/doctor3.jpg',
             kOrangeColor,
           ),
           SizedBox(

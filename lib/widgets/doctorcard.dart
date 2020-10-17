@@ -1,5 +1,5 @@
 import 'package:pbl_project/constant.dart';
-import 'package:pbl_project/pages/detail_screen.dart';
+import 'package:pbl_project/pages/Home/detail_screen.dart';
 import 'package:flutter/material.dart';
 
 class DoctorCard extends StatelessWidget {
